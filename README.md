@@ -1,37 +1,16 @@
-This is Weaver, a framework for writing multi-threaded Unit Tests in
-Java.
+This is a fork of the [Thread Weaver project](https://code.google.com/p/thread-weaver),
+version 0.20. It was updated to use Maven instead of Ant.
 
-Documentation is available in the docs directory, including a Users'
-Guide and a Tutorial.
+[Alasdair Mackintosh](https://code.google.com/u/alasdair.mackintosh/) is the original author.
 
-REQUIREMENTS:
+# Description
 
-Weaver was built with Java 6. (http://java.sun.com/javase/6)
+Thread Weaver is a framework for writing multi-threaded unit tests in Java.
 
-It requires the following components:
+It provides mechanisms for creating breakpoints within your code, and for halting execution of a thread when a breakpoint is reached. Other threads can then run while the first thread is blocked. This allows you to write repeatable tests for that can check for race conditions and thread safety.
 
- Javassist. (http://www.csg.is.titech.ac.jp/~chiba/javassist). Version 3.8.1 or greater.
+# Install
 
- Objenesis. (http://code.google.com/p/objenesis). Version 1.0 or greater.
+After installing Maven, run "mvn clean install" in the root directory
+to build the framework and run the unit tests.
 
- Cglib. (http://cglib.sourceforge.net). Version 2.2 or greater.
-
-To build the extensions:
-
- Easymock/Easymock Class Extesnsion. (http://easymock.org). Version 2.4 or greater.
-
-To run the tests:
-
- Easymock/Easymock Class Extesnsion.
-
- JUnit (http://www.junit.org). Version 4.5 or greater.
-
-To run the extensions tests:
-
- ASM (http://asm.ow2.org). Version 3.0 or greater.
-
-BUILDING:
-
-To build Weaver, edit the build.properties file and fill in the
-location of the required jars. The ant target "all" will build the
-main jar plus the extensions, and run all the tests.
