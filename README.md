@@ -3,6 +3,10 @@ version 0.20. It was updated to use Maven instead of Ant.
 
 [Alasdair Mackintosh](https://code.google.com/u/alasdair.mackintosh/) is the original author.
 
+# Build Status
+
+[![Build Status](https://travis-ci.org/minhongrails/ThreadWeaver.png)](https://travis-ci.org/minhongrails/ThreadWeaver)
+
 # Description
 
 Thread Weaver is a framework for writing multi-threaded unit tests in Java.
