@@ -16,6 +16,7 @@ import junit.framework.TestCase;
 
 import java.util.HashSet;
 import java.util.Set;
+import org.junit.Ignore;
 
 /**
  * Unit test for UserManager. Demonstrates use of
@@ -23,6 +24,7 @@ import java.util.Set;
  *
  * @author alasdair.mackintosh@gmail.com (Alasdair Mackintosh)
  */
+@Ignore
 public class UserManagerTest extends TestCase {
 
   private static final String USER = "User";

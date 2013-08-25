@@ -1,0 +1,59 @@
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+      <groupId>com.google.testing</groupId>
+      <artifactId>threadweaver</artifactId>
+      <version>0.2</version>
+  </parent>
+  <name>extensions</name>
+  <artifactId>extensions</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+      <dependency>
+          <groupId>com.google.testing</groupId>
+          <artifactId>main</artifactId>
+          <version>0.2</version>
+          
+      </dependency>
+      
+      <dependency>
+      	<groupId>org.javassist</groupId>
+      	<artifactId>javassist</artifactId>
+<version>3.18.0-GA</version>
+      </dependency>
+      
+      <dependency>
+      	<groupId>org.objenesis</groupId>
+      	<artifactId>objenesis</artifactId>
+      	<version>1.4</version>
+      </dependency>
+      
+      <dependency>
+      	<groupId>cglib</groupId>
+      	<artifactId>cglib</artifactId>
+      	<version>2.2.2</version>
+      </dependency>
+      <dependency>
+           <groupId>org.ow2.asm</groupId>
+           <artifactId>asm</artifactId>
+           <version>4.1</version>
+         </dependency>
+         <dependency>
+              <groupId>org.easymock</groupId>
+              <artifactId>easymock</artifactId>
+              <version>3.2</version>              
+            </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>
