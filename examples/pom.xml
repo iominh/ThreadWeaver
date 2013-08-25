@@ -4,56 +4,59 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-      <groupId>com.google.testing</groupId>
-      <artifactId>threadweaver</artifactId>
-      <version>0.2</version>
+    <groupId>com.google.testing</groupId>
+    <artifactId>threadweaver</artifactId>
+    <version>0.2</version>
   </parent>
-  <name>examples</name>
-  <artifactId>examples</artifactId>
+  <name>tw-examples</name>
+  <artifactId>tw-examples</artifactId>
   <packaging>jar</packaging>
 
   <dependencies>
-      
-      <dependency>
-          <groupId>com.google.testing</groupId>
-          <artifactId>extensions</artifactId>
-          <version>0.2</version>
-      </dependency>
-      
-      <dependency>
-      	<groupId>org.javassist</groupId>
-      	<artifactId>javassist</artifactId>
-<version>3.18.0-GA</version>
-      </dependency>
-      
-      <dependency>
-      	<groupId>org.objenesis</groupId>
-      	<artifactId>objenesis</artifactId>
-      	<version>1.4</version>
-      </dependency>
-      
-      <dependency>
-      	<groupId>cglib</groupId>
-      	<artifactId>cglib</artifactId>
-      	<version>2.2.2</version>
-      </dependency>
-      <dependency>
-           <groupId>org.ow2.asm</groupId>
-           <artifactId>asm</artifactId>
-           <version>4.1</version>
-         </dependency>
-         <dependency>
-              <groupId>org.easymock</groupId>
-              <artifactId>easymock</artifactId>
-              <version>3.2</version>              
-            </dependency>
+
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
+      <groupId>com.google.testing</groupId>
+      <artifactId>tw-extensions</artifactId>
+      <version>${extensions_version}</version>
     </dependency>
 
-  </dependencies>
+    <dependency>
+     <groupId>org.javassist</groupId>
+     <artifactId>javassist</artifactId>
+     <version>${javassist_version}</version>
+   </dependency>
+
+   <dependency>
+     <groupId>org.objenesis</groupId>
+     <artifactId>objenesis</artifactId>
+     <version>${objenesis_version}</version>
+   </dependency>
+
+   <dependency>
+     <groupId>cglib</groupId>
+     <artifactId>cglib</artifactId>
+     <version>${cglib_version}</version>
+   </dependency>
+   <dependency>
+     <groupId>org.ow2.asm</groupId>
+     <artifactId>asm</artifactId>
+     <version>${asm_version}</version>
+   </dependency>
+
+   <!-- test scope -->
+   <dependency>
+     <groupId>org.easymock</groupId>
+     <artifactId>easymock</artifactId>
+     <version>${easymock_version}</version>
+     <scope>test</scope>
+   </dependency>
+   <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>${junit_version}</version>
+    <scope>test</scope>
+  </dependency>
+
+</dependencies>
 
 </project>

@@ -1,4 +1,6 @@
 *.class
+*.project
+*.classpath
 target/
 
 # Package Files #

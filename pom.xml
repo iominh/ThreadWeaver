@@ -1,26 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.google.testing</groupId>
-    <artifactId>threadweaver</artifactId>
-    <packaging>pom</packaging>
-    <version>0.2</version>
-    <name>threadweaver</name>
+	<parent>
+		<groupId>org.sonatype.oss</groupId>
+		<artifactId>oss-parent</artifactId>
+		<version>7</version>
+	</parent>
 
-    <modules>
-        <module>main</module>
-        <module>extensions</module>
-        <module>examples</module>
-    </modules>
-    
-    <properties>
-        <javassist_version>3.18.0-GA</javassist_version>
-        
-        
-    </properties>
-    
-    
+	<groupId>com.google.testing</groupId>
+	<artifactId>threadweaver</artifactId>
+	<packaging>pom</packaging>
+	<version>0.2</version>
+	<name>threadweaver</name>
+	<description>Thread Weaver is a framework for writing multi-threaded unit tests in Java.  It provides mechanisms for creating breakpoints within code, and for halting execution of a thread when a breakpoint is reached.</description>
+	<url>http://code.google.com/p/thread-weaver/</url>
+
+	<scm>
+		<url>http://code.google.com/p/thread-weaver/source/checkout</url>
+		<connection>scm:svn:https://thread-weaver.googlecode.com/svn/tags/maven/snapshot</connection>
+		<developerConnection>scm:svn:https://thread-weaver.googlecode.com/svn/tags/maven/snapshot</developerConnection>
+	</scm>
+
+	<developers>
+		<developer>
+			<name>Mackintosh, Alasdair</name>
+			<email>alasdair.mackintosh@gmail.com</email>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>main</module>
+		<module>extensions</module>
+		<module>examples</module>
+	</modules>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>	
+		<main_version>0.2</main_version>	
+		<extensions_version>0.2</extensions_version>	
+		<javassist_version>3.18.0-GA</javassist_version>
+		<objenesis_version>1.4</objenesis_version>
+		<cglib_version>2.2.2</cglib_version>
+		<asm_version>4.1</asm_version>
+		<easymock_version>3.2</easymock_version>
+		<junit_version>4.11</junit_version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
